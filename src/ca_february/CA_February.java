@@ -4,6 +4,10 @@
  */
 package ca_february;
 
+import java.io.FileReader;
+import java.util.Scanner;
+import java.util.*;
+
 /**
  *
  * @author User
@@ -14,11 +18,19 @@ public class CA_February {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        
-        System.out.println("Hola hola!"); 
-        
-        
-    }
     
+    File fileobj = new File("C:\Users\User\OneDrive\Desktop\status.txt");
+    Scanner input = new Scanner(fileobj);
+    
+    while(input.hasNext())
+    {
+        String a = input.nextLine();
+        System.out.println(a);
+    }
+        
+        
+        
+        
+        
+    }      
 }
