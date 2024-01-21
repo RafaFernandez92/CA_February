@@ -70,7 +70,7 @@ public class CA_February {
             return false;
         }
         
-        System.out.println("Valid PPSN!");
+        System.out.println("Valid Workload number!");
         return true;
         
         
