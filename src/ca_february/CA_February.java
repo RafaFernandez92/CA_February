@@ -4,9 +4,9 @@
  */
 package ca_february;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.Scanner;
-import java.util.*;
+
 
 /**
  *
@@ -22,14 +22,19 @@ public class CA_February {
 //    File fileobj = new File("C:\Users\User\OneDrive\Desktop\status.txt");
 //    Scanner in = new Scanner(fileobj);
     //Scan part that I'm not able to do atm
-    try{
-        Scanner statusFile = new Scanner(new FileReader("C:\\Users\\User\\OneDrive\\Documentos\\NetBeansProjects\\CA_February\\status.txt"));
-        someLine = statusFile.nextLine();
-        
-        System.out.println(someLine);
-        
-    }catch (Exception e) {
-        System.out.println("File error");
+    FileReader archive;
+    BufferedReader lector;
+    
+    try {
+        archive=new FileReader(C:\Users\User\OneDrive\Documentos\NetBeansProjects\CA_February\status.txt);
+        if (archive.ready()) {
+            lector=new BufferedReader(archive);
+        } else {
+            System.out.println("Cannot read the archive");
+        }
+    } catch (Exception e) {
+        System.out.println("No available");
+    }
     }
     //Checking Workload numbers/letters area.
     
