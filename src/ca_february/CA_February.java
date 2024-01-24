@@ -26,9 +26,13 @@ public class CA_February {
     BufferedReader lector;
     
     try {
-        archive=new FileReader(C:\Users\User\OneDrive\Documentos\NetBeansProjects\CA_February\status.txt);
+        archive=new FileReader("status.txt");
         if (archive.ready()) {
             lector=new BufferedReader(archive);
+            String chain;
+            while((chain = lector.readLine()) != null) {
+                System.out.println(chain);
+            }
         } else {
             System.out.println("Cannot read the archive");
         }
@@ -36,80 +40,81 @@ public class CA_February {
         System.out.println("No available");
     }
     }
+}
     //Checking Workload numbers/letters area.
     
-    public static boolean checkLength(String workload) {
-        String totalNum = workload.substring(0,8);
-        return (totalNum.length() == 8 || workload.length() == 9);
-    }
-    
-    public static boolean checkFullName(String workload) {
-        String fullName = workload.substring(0,20);
-        return (fullName.length() == 20);
-        
-    }
-    
-    
-    public static boolean checkClassNumber(String workload) {
-        String classNum = workload.substring(0,1);
-        return (classNum.matches("[0-9]"));
-    }
-    
-    public static boolean checkForLetters(String workload) {
-        String middleLetters = workload.substring(2, 4);
-        return (middleLetters.matches("[A-Z]+"));
-    }
-    
-    public static boolean checkForNums(String workload) {
-        String lastNums = workload.substring(5,8);
-        return (lastNums.matches("[0-9]+"));
-    }
-    
-    public static boolean checkForFirstNums(String workload) {
-        String firstNums = workload.substring(0,3);
-        return (firstNums.matches("[0-9]+"));
-    }
-    
-    public static boolean validateWorkload(String workload) {
-        if (!checkLength(workload)) {
-            System.out.println("Incorrect length");
-            return false;
-        }
-        
-        if (!checkForNums(workload)) {
-            System.out.println("First 3 characters or last 3 characters are not numbers.");
-            return false;
-        }
-        
-        if (!checkForLetters(workload)) {
-            System.out.println("Middle characters must be letters");
-            return false;
-        }
-        
-        if (!checkClassNumber(workload)) {
-            System.out.println("Number not valid. Please, try again.");
-            return false;
-        }
-        
-        
-        
-        
-        System.out.println("Valid Workload number!");
-        return true;
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    }
-        
-        
-        
-        
-        
-    }      
-
+//    public static boolean checkLength(String workload) {
+//        String totalNum = workload.substring(0,8);
+//        return (totalNum.length() == 8 || workload.length() == 9);
+//    }
+//    
+//    public static boolean checkFullName(String workload) {
+//        String fullName = workload.substring(0,20);
+//        return (fullName.length() == 20);
+//        
+//    }
+//    
+//    
+//    public static boolean checkClassNumber(String workload) {
+//        String classNum = workload.substring(0,1);
+//        return (classNum.matches("[0-9]"));
+//    }
+//    
+//    public static boolean checkForLetters(String workload) {
+//        String middleLetters = workload.substring(2, 4);
+//        return (middleLetters.matches("[A-Z]+"));
+//    }
+//    
+//    public static boolean checkForNums(String workload) {
+//        String lastNums = workload.substring(5,8);
+//        return (lastNums.matches("[0-9]+"));
+//    }
+//    
+//    public static boolean checkForFirstNums(String workload) {
+//        String firstNums = workload.substring(0,3);
+//        return (firstNums.matches("[0-9]+"));
+//    }
+//    
+//    public static boolean validateWorkload(String workload) {
+//        if (!checkLength(workload)) {
+//            System.out.println("Incorrect length");
+//            return false;
+//        }
+//        
+//        if (!checkForNums(workload)) {
+//            System.out.println("First 3 characters or last 3 characters are not numbers.");
+//            return false;
+//        }
+//        
+//        if (!checkForLetters(workload)) {
+//            System.out.println("Middle characters must be letters");
+//            return false;
+//        }
+//        
+//        if (!checkClassNumber(workload)) {
+//            System.out.println("Number not valid. Please, try again.");
+//            return false;
+//        }
+//        
+//        
+//        
+//        
+//        System.out.println("Valid Workload number!");
+//        return true;
+//        
+//        
+//        
+//        
+//        
+//        
+//        
+//        
+//        
+//    }
+//        
+//        
+//        
+//        
+//        
+//    }      
+//
